@@ -3,32 +3,6 @@
 	<title>jQuery</title>
 	<link rel="stylesheet" type="text/css" href="debugging_jquery.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
-	<script type="text/javascript">
-	
-			$('p, h3, li').hover( function(){
-				$(this).css('color',white);
-				}
-				, function() {$(this).css('color', 'black');
-			});
-
-			$('a').click(function(){
-				alert("we don't actually serve pizza...");
-			});
-
-			$('img').click(function(){
-				$(this).slideUp();
-			);
-
-			$('h5').click(function(){
-				$('img').slide Down();
-			});
-
-			$('button').click(function(){
-				var result = $('input:checked').value()  
-				alert("Thank you for your input, we like " + result + " too!");
-			});	
-
-	</script>
 </head>
 <body>
 	<div id='wrapper'>
@@ -82,5 +56,33 @@
 			<h5>Made from the freshest ingredients!</h5>
 		</div>  <!--end of right content -->	
 	</div> <!--end of wrapper -->
+
+	<script>
+	
+		$('p, h3, li').hover( function(){
+			$(this).css('color','white');
+			}
+			, function() {$(this).css('color', 'black');
+		});
+
+		$('a').click(function(){
+			alert("we don't actually serve pizza...");
+		});
+
+		$('img').click(function(){
+			$(this).slideUp();
+		});
+
+		$('h5').click(function(){
+			$('img').slideDown();
+		});
+
+		$('button').click(function(){
+			var result = $('input:checked').val();
+			alert("Thank you for your input, we like " + result + " too!");
+		});	
+
+</script>
+
 </body>
 </html>
